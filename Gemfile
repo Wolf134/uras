@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -39,6 +39,16 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13.0'
   gem 'selenium-webdriver'
+  #Guard для автоматизации Ruby on Rails разработки
+  gem 'guard'
+   # And updates gems when needed
+   gem 'guard-bundler', require: false
+   # And auto starts rails server
+   gem 'guard-rails'
+   # automatically reload your browser when 'view' files are modified
+   gem 'guard-livereload'
+   # атоматическое тестирование
+   gem 'guard-rspec', require: false
 end
 
 group :development do
